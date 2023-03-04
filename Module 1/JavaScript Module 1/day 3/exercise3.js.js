@@ -91,18 +91,28 @@ console.log(reverseword(`dodol`));
 console.log(`=================== No 8 Segitiga ========================`
 );
 
-let sKosong = ``
-let loopSegitiga = 4
-let angkaSegitiga = 1
 
+let angkaSegitiga = 1
+let loopSegitiga = 15
+let loopbreak = 99
 for (let i = 0 ; i < loopSegitiga ; i++){
+    let sSamakaki= ``;
+    
     for (let j = loopSegitiga ; j >= i ; j--){
-        sKosong += ` `;
+    sSamakaki += ` `;
     }
     for (let j = 0 ; j <= i ; j++){
-        sKosong += angkaSegitiga + ` `;
-        angkaSegitiga++
+    if (angkaSegitiga >= loopbreak + 1){break}
+    if (loopbreak.toString().length - angkaSegitiga.toString().length == 2) {
+        sSamakaki += `  `;
+    } else if (loopbreak.toString().length - angkaSegitiga.toString().length == 1) {
+        sSamakaki += ` `;
+    } else {
+        sSamakaki += ``
     }
-    sKosong += `\n`;
+    sSamakaki += angkaSegitiga + ` `;
+    angkaSegitiga++
+    }
+    // sSamakaki += `\n`;
+    console.log(sSamakaki);
 }
-console.log(sKosong);

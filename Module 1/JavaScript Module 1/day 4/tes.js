@@ -26,8 +26,7 @@
 
 let angkaSegitiga = 1
 let loopSegitiga = 15
-let loopbreak = 
-
+let loopbreak = 99
 for (let i = 0 ; i < loopSegitiga ; i++){
     let sSamakaki= ``;
     
